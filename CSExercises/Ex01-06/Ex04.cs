@@ -10,7 +10,12 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            
+            double x;
+            Console.WriteLine("Enter an double : ");
+            string value = Console.ReadLine();
+            x = Convert.ToInt32(value);
+            System.Math.Sqrt(x);
+            Console.WriteLine("Square root = {0:0.00}" );
         }
     }
 }
