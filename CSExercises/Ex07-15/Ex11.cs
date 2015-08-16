@@ -10,7 +10,13 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            
+            double x, y;
+            Console.WriteLine("Enter the distance :");
+            string distance = Console.ReadLine();
+            x = Convert.ToDouble(distance);
+            y = 2.40 + 0.4 * x;
+            Console.WriteLine("Total fare = ${0:##.00}", y);
+                   
         }
     }
 }
