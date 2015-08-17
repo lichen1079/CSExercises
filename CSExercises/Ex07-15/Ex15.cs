@@ -9,21 +9,20 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            int number, remainder, sum = 0;
-            Console.WriteLine("Enter the number : ");
-            number = int.Parse(Console.ReadLine());
-            for (int i = number; i > 0; i = i / 10)
+            int x, a1,a2,a3;
+            Console.WriteLine("Enter a three-digit number : ");
+            x = Convert.ToInt32(Console.ReadLine());
+            a1 = x / 100;
+            a2 = (x / 10) % 10;
+            a3=x%10;
+            if (x==Math.Pow(a1,3)+Math.Pow(a2,3)+Math.Pow(a3,3))
             {
-                remainder = i % 10;
-                sum = sum + remainder * remainder * remainder;
-
-            }
-            if (sum == number)
-            {
-                Console.WriteLine("The Number is an Armstrong Number");
+                Console.WriteLine("The number is an Armstrong Number.");
             }
             else
-                Console.WriteLine("The Number is not an Armstrong Number");
+            {
+                Console.WriteLine("The number is not an Armstrong Number.");
+            }
 
         }
     }

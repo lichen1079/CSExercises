@@ -18,32 +18,22 @@ namespace CSExercises
             b = Convert.ToInt32(value2);
             string value3 = Console.ReadLine();
             c = Convert.ToInt32(value3);
-            if ((a + b) > c)
+
+            if ((a + b) > c && (b + c) > a && (a + c) > b) //If a+b>c and a+c>b and b+c>a then it is valid
             {
-                if ((b + c) > a)
-                {
-                    if ((a + c) > b) //If a+b>c and a+c>b and b+c>a then it is valid  
-                    {
-                        x = (a + b + c) / 2;
-                        y = x * (x - a) * (x - b) * (x - c);
-                        Area = Math.Sqrt(y);
-                     
-                        Console.WriteLine("The area of triangle = " + Area);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Triangle is not valid");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Triangle is not valid");
-                }
+
+                x = (a + b + c) / 2;
+                y = x * (x - a) * (x - b) * (x - c);
+                Area = Math.Sqrt(y);
+
+                Console.WriteLine("The area of triangle = " + Area);
+
             }
             else
             {
                 Console.WriteLine("Triangle is not valid");
             }
+            
 
 
             
