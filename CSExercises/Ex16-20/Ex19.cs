@@ -16,8 +16,10 @@ namespace CSExercises
             Math.Ceiling(x);
             x = Math.Ceiling(x) / 10;
             if (x <= 0.5)
-            { y = 2.4;   
-                Console.WriteLine("Taxi fare is $2.40");}
+            {
+                y = 2.4;   
+                Console.WriteLine("Taxi fare is $2.40");
+            }
             else if (x <= 9)
             {
                 y = 2.4 + 0.4 * 8.5;

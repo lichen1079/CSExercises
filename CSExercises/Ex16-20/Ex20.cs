@@ -20,28 +20,27 @@ namespace CSExercises
                 Console.WriteLine("Enter quantity for MP3:");
                 z = Convert.ToInt32(Console.ReadLine());
 
-                double Px = 900 * x;
-                {
-                    if (Px >= 5000 && Px < 10000)
-                        Px = Px * 0.9;
-
-                    else if (Px >= 10000)
-                        Px = Px * 0.85;
-                }
-
-                double Py = 500 * y;
-                {
-                    if (Py >= 5000 && Px < 10000)
-                        Py = Py * 0.9;
-
-                    else if (Py >= 10000)
-                        Py = Py * 0.85;
-                }
-
-                double Pz = 700 * z;
+                double Px = 900 * x, Py = 500 * y, Pz = 700 * z;
                 double Pt = Px + Py + Pz;
-                Console.WriteLine("Total price for this order is $" + Pt);
 
+                if(Pt<5000)
+                {
+                    Pt = Px + Py + Pz;
+                    Console.WriteLine("Total price for this order is ${0:0.00}",Pt);
+
+                }
+                else if (Pt > 5000 && Px < 10000)
+                {
+                    Pt = 0.9 * Px + 0.9 * Py + Pz;
+                    Console.WriteLine("Total price for this order is ${0:0.00}", Pt);
+                }
+                
+                else
+                {
+                    Pt = 0.85 * Px + 0.85 * Py + Pz;
+                    Console.WriteLine("Total price for this order is ${0:0.00}", Pt);
+                }
+                
 
             }
         }
